@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Facetime-App",
-    "slug": "Facetime-App",
+    "name": "playBox",
+    "slug": "playBox",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

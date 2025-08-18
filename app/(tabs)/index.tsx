@@ -1,10 +1,9 @@
 import { useFonts } from "expo-font";
-import { Link } from "expo-router";
 import { Text, View } from "react-native";
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
-    'SpaceMono': require('../assets/fonts/SpaceMono-Regular.ttf'),
+    'SpaceMono': require('../../assets/fonts/SpaceMono-Regular.ttf'),
   });
   if (!fontsLoaded) {
     return null;
@@ -25,14 +24,6 @@ export default function Index() {
         }}>
            playBox
         </Text>
-        <Link href="/onboarding" style={{
-          marginTop: 10,
-          fontSize: 18,
-          color: '#444',
-          textDecorationLine: 'underline',
-        }}>
-          Get Started
-        </Link>
       </View>
       <View style={{
         flex: 1,
