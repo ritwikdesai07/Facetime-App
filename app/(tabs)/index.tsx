@@ -77,27 +77,27 @@ export default function Index() {
             </View>
             <TouchableOpacity
               style={{
-                backgroundColor: '#175904ff',
-                paddingVertical: 10,
-                paddingHorizontal: 24,
-                borderRadius: 12,
-                alignSelf: 'center',
-                marginTop: -13,
+              backgroundColor: '#175904ff',
+              paddingVertical: 10,
+              paddingHorizontal: 24,
+              borderRadius: 12,
+              alignSelf: 'center',
+              marginTop: -13,
               }}
               activeOpacity={0.8}
             >
-              <Text style={{
+                <Text style={{
                 color: '#fff',
                 fontWeight: 'bold',
                 fontSize: 16,
-                fontFamily: 'SpaceMono',
+                fontFamily: 'APL386',
                 letterSpacing: 1,
-              }}>
+                }}>
                 Play with sharePlay
-              </Text>
+                </Text>
             </TouchableOpacity>
-          </View>
-          <View style={{
+            </View>
+            <View style={{
             width: '100%',
             height: 260,
             backgroundColor: '#fff',
@@ -111,66 +111,88 @@ export default function Index() {
             justifyContent: 'center',
             padding: 32,
             marginBottom: 20,
-          }}>
+            }}>
             <View style={{ width: '100%', alignItems: 'center', marginBottom: 16 }}>
               <Image
-                source={require('../../assets/images/tabletennis.png')}
-                style={{
-                  width: 300,
-                  height: 180,
-                  borderRadius: 18,
-                  resizeMode: 'cover',
-                  marginBottom: 12,
-                  borderWidth: 3,
-                  borderColor: '#e0e0e0',
-                  shadowColor: '#000',
-                  shadowOffset: { width: 0, height: 4 },
-                  shadowOpacity: 0.15,
-                  shadowRadius: 1,
-                  backgroundColor: '#fff',
-                }}
+              source={require('../../assets/images/tabletennis.png')}
+              style={{
+                width: 300,
+                height: 180,
+                borderRadius: 18,
+                resizeMode: 'cover',
+                marginBottom: 12,
+                borderWidth: 3,
+                borderColor: '#e0e0e0',
+                shadowColor: '#000',
+                shadowOffset: { width: 0, height: 4 },
+                shadowOpacity: 0.15,
+                shadowRadius: 1,
+                backgroundColor: '#fff',
+              }}
               />
             </View>
             <TouchableOpacity
               style={{
-                backgroundColor: '#6ba3f1ff',
-                paddingVertical: 10,
-                paddingHorizontal: 24,
-                borderRadius: 12,
-                alignSelf: 'center',
-                marginTop: -20,
+              backgroundColor: '#6ba3f1ff',
+              paddingVertical: 10,
+              paddingHorizontal: 24,
+              borderRadius: 12,
+              alignSelf: 'center',
+              marginTop: -20,
               }}
               activeOpacity={0.8}
             >
               <Text style={{
-                color: '#fff',
-                fontWeight: 'bold',
-                fontSize: 16,
-                fontFamily: 'SpaceMono',
-                letterSpacing: 1,
+              color: '#fff',
+              fontWeight: 'bold',
+              fontSize: 16,
+              fontFamily: 'APL386',
+              letterSpacing: 1,
               }}>
-                Play with sharePlay
+              Play with sharePlay
               </Text>
             </TouchableOpacity>
             {/* Box 2 content */}
-          </View>
-          <View style={{
+            </View>
+            <View style={{
             width: '100%',
             height: 260,
-            backgroundColor: '#fff',
+            backgroundColor: '#f8f8f8',
             borderRadius: 18,
             shadowColor: '#000',
             shadowOffset: { width: 0, height: 10 },
-            shadowOpacity: 0.18,
-            shadowRadius: 12,
-            elevation: 10,
+            shadowOpacity: 0.12,
+            shadowRadius: 10,
+            elevation: 8,
             alignItems: 'center',
             justifyContent: 'center',
             padding: 32,
             marginBottom: 20,
-          }}>
-            {/* Box 3 content */}
-          </View>
+            borderStyle: 'dashed',
+            borderWidth: 2,
+            borderColor: '#d1d5db',
+            }}>
+            <Text style={{
+              fontSize: 22,
+              fontWeight: '600',
+              color: '#222',
+              fontFamily: 'SpaceMono',
+              textAlign: 'center',
+              letterSpacing: 1,
+              marginBottom: 8,
+            }}>
+              More games coming soon
+            </Text>
+            <Text style={{
+              fontSize: 16,
+              color: '#6b7280',
+              fontFamily: 'SpaceMono',
+              textAlign: 'center',
+              letterSpacing: 0.5,
+            }}>
+              Stay tuned for new experiences!
+            </Text>
+            </View>
         </ScrollView>
       </View>
     </View>
