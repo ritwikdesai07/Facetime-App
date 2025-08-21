@@ -1,9 +1,37 @@
-import React, { useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage"; // 1. Import AsyncStorage
+import React, { useEffect, useState } from "react";
 import { Button, StyleSheet, Text, TextInput, View } from "react-native";
 
 const Profile = () => {
     const [name, setName] = useState("");
     const [submitted, setSubmitted] = useState(false);
+    const storageKey = "@user_name"; // 2. Define a key for storage
+
+    // 3. Use useEffect to load data when the component mounts
+    useEffect(() => {
+        const loadName = async () => {
+            try {
+                const storedName = await AsyncStorage.getItem(storageKey);
+                if (storedName !== null) {
+                    setName(storedName);
+                    setSubmitted(true); // Automatically set to submitted if a name is found
+                }
+            } catch (e) {
+                console.error("Failed to load name from storage", e);
+            }
+        };
+
+        loadName();
+    }, []);
+
+    const handleSave = async () => {
+        try {
+            await AsyncStorage.setItem(storageKey, name); // 4. Save the name
+            setSubmitted(true);
+        } catch (e) {
+            console.error("Failed to save name to storage", e);
+        }
+    };
 
     return (
         <View style={styles.container}>
@@ -20,7 +48,7 @@ const Profile = () => {
                     />
                     <Button
                         title="Save"
-                        onPress={() => setSubmitted(true)}
+                        onPress={handleSave} // 5. Call the new save function
                         color="#F9A8D4"
                         disabled={!name.trim()}
                     />
